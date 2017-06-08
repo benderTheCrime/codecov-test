@@ -1,0 +1,16 @@
+const { expect } = require('chai');
+
+const { bar, foo } = require('../');
+
+describe('index', function() {
+    describe('bar', function() {
+        it('should return 1 given 2', function() {
+            expect(foo(2)).to.equal(1);
+        });
+    });
+    describe('foo', function() {
+        it('should return 1', function() {
+            expect(foo()).to.equal(1);
+        });
+    });
+});

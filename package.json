@@ -1,0 +1,23 @@
+{
+  "name": "codecov-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:mocha": "./node_modules/.bin/mocha ./test/lib",
+    "test:integration": "./node_modules/.bin/mocha ./spec/integration",
+    "test:watch": "npm run test:mocha -- --watch",
+    "test:coverage": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./test",
+    "posttest:coverage": "curl -s https://codecov.io/bash | bash -s - -t=2d11aaa2-b3a9-41aa-be8c-373e5d65734b",
+    "test": "npm run test:coverage && npm run test:integration"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "codecov": "^2.2.0",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.2"
+  }
+}

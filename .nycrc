@@ -1,0 +1,15 @@
+{
+  "all": true,
+  "checkCoverage": false,
+  "exclude": [
+    "coverage",
+    "dist",
+    "test"
+  ],
+  "reporter": [
+    "lcov",
+    "cobertura",
+    "text",
+    "text-summary"
+  ]
+}
