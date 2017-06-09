@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:mocha": "./node_modules/.bin/mocha ./test/lib",
+    "test:mocha": "./node_modules/.bin/mocha ./test",
     "test:integration": "./node_modules/.bin/mocha ./spec/integration",
     "test:watch": "npm run test:mocha -- --watch",
     "test:coverage": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./test",
