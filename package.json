@@ -8,15 +8,20 @@
     "test:integration": "./node_modules/.bin/mocha ./spec/integration",
     "test:watch": "npm run test:mocha -- --watch",
     "test:coverage": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./test",
-    "posttest:coverage": "curl -s https://codecov.io/bash | bash -s - -t=2d11aaa2-b3a9-41aa-be8c-373e5d65734b",
-    "test": "npm run test:coverage && npm run test:integration"
+    "posttest:coverage": "curl -s https://codecov.io/bash | bash -s - -t 2d11aaa2-b3a9-41aa-be8c-373e5d65734b",
+    "test": "npm run test:coverage",
+    "precommit": "npm run test"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "email": "joe.groseclose@gmail.com",
+    "name": "Joe Groseclose"
+  },
+  "license": "MIT",
   "devDependencies": {
     "chai": "^4.0.2",
     "codecov": "^2.2.0",
+    "husky": "^0.13.4",
     "mocha": "^3.4.2",
     "nyc": "^11.0.2"
   }
